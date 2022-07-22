@@ -1,0 +1,68 @@
+@import '../../utils/variables';
+
+.login {
+	display: flex;
+	justify-content: center;
+	flex-grow: 1;
+	height: calc(60vh - 80px);
+	padding: 10px;
+}
+
+.formWrap {
+	flex-direction: column;
+	display: flex;
+	justify-content: center;
+	max-width: 340px;
+}
+
+.title {
+	color: $primary;
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	row-gap: 10px;
+	color: $black;
+
+	& label {
+		color: $primary;
+		font-size: 16px;
+		user-select: none;
+	}
+
+	& input {
+		font-weight: 600;
+		height: 40px;
+		width: 300px;
+		padding: 10px;
+		border: 1px solid $primary;
+		margin: 5px 0;
+	}
+
+	& button {
+		font-weight: 600;
+		width: 300px;
+		height: 40px;
+		transition: 0.1s ease-out;
+
+		&:hover {
+			background-color: $secondaryDark;
+		}
+	}
+
+	& {
+		@media (max-width: 330px) {
+			& input {
+				width: 250px;
+			}
+			& button {
+				width: 250px;
+			}
+		}
+	}
+}

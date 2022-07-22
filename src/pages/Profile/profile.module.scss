@@ -1,0 +1,79 @@
+.profilePage {
+	display: flex;
+	flex-grow: 1;
+	justify-content: center;
+}
+
+.cardUserTitle {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 10px;
+
+	> img {
+		border-radius: 50%;
+		width: 150px;
+		height: 150px;
+	}
+}
+
+.name {
+	font-weight: 500;
+	font-size: 28px;
+}
+
+.profileInfo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.cardUser {
+}
+
+.lookingForAJobWrap {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	& span {
+		margin-right: 5px;
+		font-weight: 500;
+		color: #58595b;
+	}
+
+	& img {
+		width: 30px;
+		height: 30px;
+	}
+}
+
+.lookingForAJob {
+	display: flex;
+	align-items: center;
+
+	& span {
+		color: black;
+	}
+}
+
+.contacts {
+	padding: 10px;
+	display: flex;
+	column-gap: 10px;
+}
+
+.status {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
+}
+
+.statusTitle {
+	font-size: 20px;
+}
+
+.notFound {
+	font-size: 24px;
+}

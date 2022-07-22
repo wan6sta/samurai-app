@@ -1,0 +1,49 @@
+@import '../../utils/variables';
+
+.nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 202px;
+}
+
+.list {
+	& li {
+		& a {
+			display: flex;
+			justify-content: center;
+			padding: 10px;
+			width: 200px;
+			background-color: $primary;
+			color: white;
+			font-weight: 700;
+			border-left: 2px solid rgba(255, 29, 29, 0);
+			transition: 0.1s ease-out;
+
+			&:hover {
+				background-color: $primaryWithOpacity92;
+			}
+		}
+	}
+}
+
+.activeLink {
+	border-left: 2px solid $secondary !important;
+}
+
+.signOut {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	padding: 5px 0;
+	cursor: pointer;
+	background-color: $dark700;
+	transition: 0.1s ease-out;
+	color: $white;
+	font-weight: 700;
+
+	&:hover {
+		background-color: $dark700WithOpacity92;
+	}
+}
