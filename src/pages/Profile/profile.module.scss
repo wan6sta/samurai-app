@@ -116,6 +116,10 @@
 	right: 0;
 	font-size: 14px;
 	transition: 0.1s ease-out;
+	@media (max-width: 650px) {
+		top: 400px;
+		right: 15px;
+	}
 
 	&:hover {
 		background-color: transparent;

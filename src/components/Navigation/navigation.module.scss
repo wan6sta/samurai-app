@@ -5,6 +5,9 @@
 	justify-content: center;
 	align-items: center;
 	width: 202px;
+	@media (max-width: 950px) {
+		display: none;
+	}
 }
 
 .list {

@@ -35,9 +35,10 @@ const validate = (values: any) => {
 }
 
 const ProfileSettings = () => {
-	const { isLogin, authUser } = useAppSelector((state) => state.authReducer)
+	const naviagte = useNavigate()
+	const { isLogin, authUser } = useAppSelector(state => state.authReducer)
 	const { authUser: authUserMoreInfo } = useAppSelector(
-		(state) => state.profilePageReducer
+		state => state.profilePageReducer
 	)
 	const navigate = useNavigate()
 	const dispatch = useDispatch<any>()
@@ -71,7 +72,7 @@ const ProfileSettings = () => {
 			instagram: instText
 		},
 		validate,
-		onSubmit: (values) => {
+		onSubmit: values => {
 			const userInfo = {
 				id: authUser.id,
 				lookingForAJob: values.lookingForAJob,
@@ -85,6 +86,8 @@ const ProfileSettings = () => {
 				}
 			}
 			dispatch(setProfileInfo(userInfo))
+
+			naviagte(`/profile/${authUserMoreInfo?.userId}`, { replace: true })
 		}
 	})
 
@@ -92,23 +95,23 @@ const ProfileSettings = () => {
 		<div className={styles.formInfoProfile}>
 			<form onSubmit={formik.handleSubmit}>
 				<div className={styles.lookingJob}>
-					<label htmlFor="lookingForAJob">Looking for a job</label>
+					<label htmlFor='lookingForAJob'>Looking for a job</label>
 					<input
 						className={styles.rememberMe}
-						id="lookingForAJob"
-						name="lookingForAJob"
-						type="checkbox"
+						id='lookingForAJob'
+						name='lookingForAJob'
+						type='checkbox'
 						onChange={formik.handleChange}
 						checked={formik.values.lookingForAJob}
 					/>
 				</div>
 
 				<div className={styles.divLabelWrapper}>
-					<label htmlFor="lookingForAJobDescription">Description</label>
+					<label htmlFor='lookingForAJobDescription'>Description</label>
 					<input
-						id="lookingForAJobDescription"
-						name="lookingForAJobDescription"
-						type="text"
+						id='lookingForAJobDescription'
+						name='lookingForAJobDescription'
+						type='text'
 						onChange={formik.handleChange}
 						value={formik.values.lookingForAJobDescription}
 					/>
@@ -118,11 +121,11 @@ const ProfileSettings = () => {
 				</div>
 
 				<div className={styles.divLabelWrapper}>
-					<label htmlFor="fullName">FullName</label>
+					<label htmlFor='fullName'>FullName</label>
 					<input
-						id="fullName"
-						name="fullName"
-						type="text"
+						id='fullName'
+						name='fullName'
+						type='text'
 						onChange={formik.handleChange}
 						value={formik.values.fullName}
 					/>
@@ -132,11 +135,11 @@ const ProfileSettings = () => {
 				</div>
 
 				<div className={styles.divLabelWrapper}>
-					<label htmlFor="AboutMe">About Me</label>
+					<label htmlFor='AboutMe'>About Me</label>
 					<input
-						id="AboutMe"
-						name="AboutMe"
-						type="text"
+						id='AboutMe'
+						name='AboutMe'
+						type='text'
 						onChange={formik.handleChange}
 						value={formik.values.AboutMe}
 					/>
@@ -146,11 +149,11 @@ const ProfileSettings = () => {
 				</div>
 
 				<div className={styles.divLabelWrapper}>
-					<label htmlFor="github">Git hub</label>
+					<label htmlFor='github'>Git hub</label>
 					<input
-						id="github"
-						name="github"
-						type="text"
+						id='github'
+						name='github'
+						type='text'
 						onChange={formik.handleChange}
 						value={formik.values.github}
 					/>
@@ -160,11 +163,11 @@ const ProfileSettings = () => {
 				</div>
 
 				<div className={styles.divLabelWrapper}>
-					<label htmlFor="vk">VK</label>
+					<label htmlFor='vk'>VK</label>
 					<input
-						id="vk"
-						name="vk"
-						type="text"
+						id='vk'
+						name='vk'
+						type='text'
 						onChange={formik.handleChange}
 						value={formik.values.vk}
 					/>
@@ -174,11 +177,11 @@ const ProfileSettings = () => {
 				</div>
 
 				<div className={styles.divLabelWrapper}>
-					<label htmlFor="instagram">Instagram</label>
+					<label htmlFor='instagram'>Instagram</label>
 					<input
-						id="instagram"
-						name="instagram"
-						type="text"
+						id='instagram'
+						name='instagram'
+						type='text'
 						onChange={formik.handleChange}
 						value={formik.values.instagram}
 					/>
@@ -187,7 +190,7 @@ const ProfileSettings = () => {
 					) : null}
 				</div>
 
-				<button type="submit">Change</button>
+				<button type='submit'>Change</button>
 			</form>
 		</div>
 	)

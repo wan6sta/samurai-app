@@ -15,6 +15,12 @@
 	column-gap: 10px;
 	//justify-content: space-between;
 	width: 202px;
+	@media (max-width: 950px) {
+		width: 190px;
+	}
+	@media (max-width: 435px) {
+		display: none;
+	}
 }
 
 @keyframes reactIconAnimation {
@@ -72,4 +78,66 @@
 			padding: 5px;
 		}
 	}
+}
+
+.titleWrapWrap {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.bar {
+	cursor: pointer;
+	@media (min-width: 950px) {
+		display: none;
+	}
+	width: 40px;
+	height: 40px;
+}
+
+.barWrap {
+	position: relative;
+}
+
+.barWrapWrap {
+	cursor: pointer;
+}
+
+.nav {
+	position: absolute;
+	top: 40px;
+	@media (min-width: 950px) {
+		display: none;
+	}
+	z-index: 99;
+	right: -33px;
+	@media (max-width: 435px) {
+		right: -63px;
+	}
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.item {
+	background-color: #58595b;
+	color: white;
+	display: flex;
+	justify-content: center;
+
+	& a {
+		text-align: center;
+		padding: 2px 30px;
+	}
+
+	font-weight: 600;
+}
+
+.signOut {
+	cursor: pointer;
+	text-align: center;
+	font-weight: 600;
 }
