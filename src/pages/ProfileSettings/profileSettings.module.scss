@@ -1,0 +1,61 @@
+.formInfoProfile {
+	display: flex;
+	justify-content: center;
+	flex-grow: 1;
+
+	> form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		.lookingJob {
+			display: flex;
+			align-items: center;
+			user-select: none;
+			margin-bottom: 10px;
+
+			> label {
+				margin-right: 5px;
+			}
+
+			> input {
+				cursor: pointer;
+			}
+		}
+
+		> button {
+			margin-top: 6px;
+			background-color: #58595b;
+			color: white;
+			padding: 5px 10px;
+			transition: 0.1s ease-out;
+
+			&:hover {
+				background-color: rgba(88, 89, 91, 0.85);
+			}
+		}
+	}
+}
+
+.divLabelWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 10px;
+
+	& input {
+		color: black !important;
+		font-size: 14px;
+		padding: 5px;
+		width: 15rem;
+		border: 1px solid #58595b;
+	}
+
+	.reqField {
+		margin-top: 3px;
+		align-self: flex-start;
+		color: #f54c29;
+		font-size: 13px;
+	}
+}

@@ -49,3 +49,72 @@ export const setUserMoreInfo =
 			dispatch(profilePageSlice.actions.setError(e.message))
 		}
 	}
+
+export const setStatus = (status: string) => async (dispatch: AppDispatch) => {
+	try {
+		dispatch(profilePageSlice.actions.setIsLoading(true))
+		const data = await axiosSocial.put(
+			`/profile/status`,
+			{
+				status
+			},
+			{
+				withCredentials: true,
+				headers: { 'API-KEY': '4c455b41-e9e2-41e3-8498-c52fd2cfffdc' }
+			}
+		)
+		if (data.status === 200) {
+			dispatch(profilePageSlice.actions.setUserStatus(status))
+			dispatch(profilePageSlice.actions.setIsLoading(false))
+			dispatch(profilePageSlice.actions.setError(''))
+			return
+		}
+
+		dispatch(profilePageSlice.actions.setError('some error'))
+		dispatch(profilePageSlice.actions.setIsLoading(false))
+	} catch (e: any) {
+		dispatch(profilePageSlice.actions.setError(e.message))
+	}
+}
+
+export const setProfileInfo =
+	(userInfo: any) => async (dispatch: AppDispatch) => {
+		try {
+			dispatch(profilePageSlice.actions.setIsLoading(true))
+			const data = await axiosSocial.put(
+				`/profile`,
+				{
+					userId: userInfo.id,
+					AboutMe: userInfo.AboutMe,
+					lookingForAJob: userInfo.lookingForAJob,
+					lookingForAJobDescription: userInfo.lookingForAJobDescription,
+					fullName: userInfo.fullName,
+					contacts: {
+						instagram: userInfo.instagram,
+						vk: userInfo.vk,
+						github: userInfo.github,
+						facebook: '',
+						twitter: '',
+						website: '',
+						youtube: '',
+						mainLink: ''
+					}
+				},
+				{
+					withCredentials: true,
+					headers: { 'API-KEY': '4c455b41-e9e2-41e3-8498-c52fd2cfffdc' }
+				}
+			)
+			if (data.status === 200) {
+				dispatch(setUserMoreInfo(userInfo.id))
+				dispatch(profilePageSlice.actions.setIsLoading(false))
+				dispatch(profilePageSlice.actions.setError(''))
+				return
+			}
+
+			dispatch(profilePageSlice.actions.setError('some error'))
+			dispatch(profilePageSlice.actions.setIsLoading(false))
+		} catch (e: any) {
+			dispatch(profilePageSlice.actions.setError(e.message))
+		}
+	}

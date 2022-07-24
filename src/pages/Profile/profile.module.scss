@@ -1,4 +1,5 @@
 .profilePage {
+	position: relative;
 	display: flex;
 	flex-grow: 1;
 	justify-content: center;
@@ -12,8 +13,8 @@
 
 	> img {
 		border-radius: 50%;
-		width: 150px;
-		height: 150px;
+		width: 120px;
+		height: 120px;
 	}
 }
 
@@ -76,4 +77,48 @@
 
 .notFound {
 	font-size: 24px;
+}
+
+.statusMain {
+	color: #58595b;
+	margin-top: 3px;
+	cursor: pointer;
+}
+
+.statusInput {
+	margin-top: 3px;
+	border: 1px #58595b solid;
+	padding: 2px;
+}
+
+.buttonStatus {
+	background-color: #58595b;
+	color: white;
+	font-weight: 600;
+	padding: 3px;
+	margin-left: 5px;
+
+	transition: 0.1s ease-out;
+
+	&:hover {
+		background-color: rgba(88, 89, 91, 0.82);
+	}
+}
+
+.profileSettings {
+	background-color: #58595b;
+	color: white !important;
+	font-weight: 600;
+	padding: 5px;
+	border-radius: 3px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 14px;
+	transition: 0.1s ease-out;
+
+	&:hover {
+		background-color: transparent;
+		color: #58595b !important;
+	}
 }
