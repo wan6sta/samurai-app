@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/wan6sta/samurai-app/static/css/main.89e90749.css",
+    "main.js": "/wan6sta/samurai-app/static/js/main.70adca6c.js",
+    "static/media/user2.png": "/wan6sta/samurai-app/static/media/user2.c920752422c11377083e.png",
+    "static/media/reactIcon.svg": "/wan6sta/samurai-app/static/media/reactIcon.e27571eaed899c642345e71163624ef9.svg",
+    "index.html": "/wan6sta/samurai-app/index.html",
+    "main.89e90749.css.map": "/wan6sta/samurai-app/static/css/main.89e90749.css.map",
+    "main.70adca6c.js.map": "/wan6sta/samurai-app/static/js/main.70adca6c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.89e90749.css",
+    "static/js/main.70adca6c.js"
+  ]
+}
