@@ -14,7 +14,8 @@ export const setAuthUser = () => async (dispatch: AppDispatch) => {
 	try {
 		dispatch(authSlice.actions.authUserFetching())
 		const { data } = await axiosSocial.get<IAuthUserFetching>('/auth/me', {
-			withCredentials: true
+			withCredentials: true,
+			headers: { 'API-KEY': '4c455b41-e9e2-41e3-8498-c52fd2cfffdc' }
 		})
 		if (data.resultCode === 1) {
 			dispatch(authSlice.actions.authUserFetchingError('some error'))

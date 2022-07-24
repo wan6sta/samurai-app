@@ -14,7 +14,10 @@ export const setAuthUserMoreInfo =
 	(id: number) => async (dispatch: AppDispatch) => {
 		try {
 			dispatch(profilePageSlice.actions.setIsLoading(true))
-			const data = await axiosSocial.get(`/profile/${id}`)
+			const data = await axiosSocial.get(`/profile/${id}`, {
+				withCredentials: true,
+				headers: { 'API-KEY': '4c455b41-e9e2-41e3-8498-c52fd2cfffdc' }
+			})
 			if (data.status === 200) {
 				dispatch(profilePageSlice.actions.setAuthUserMoreInfo(data.data))
 				dispatch(profilePageSlice.actions.setIsLoading(false))
@@ -32,7 +35,10 @@ export const setUserMoreInfo =
 	(id: number) => async (dispatch: AppDispatch) => {
 		try {
 			dispatch(profilePageSlice.actions.setIsLoading(true))
-			const data = await axiosSocial.get(`/profile/${id}`)
+			const data = await axiosSocial.get(`/profile/${id}`, {
+				withCredentials: true,
+				headers: { 'API-KEY': '4c455b41-e9e2-41e3-8498-c52fd2cfffdc' }
+			})
 			if (data.status === 200) {
 				dispatch(profilePageSlice.actions.setUserProfile(data.data))
 				dispatch(profilePageSlice.actions.setIsLoading(false))

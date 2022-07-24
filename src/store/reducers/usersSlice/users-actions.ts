@@ -10,7 +10,8 @@ export const setUsersWithFilter =
 			const { data } = await axiosSocial.get(
 				`/users?count=${count}&page=${page}&term=${term}&friend=${friend}`,
 				{
-					withCredentials: true
+					withCredentials: true,
+					headers: { 'API-KEY': '4c455b41-e9e2-41e3-8498-c52fd2cfffdc' }
 				}
 			)
 			if (data.error === null) {
@@ -36,7 +37,8 @@ export const setUsersPagination =
 			const { data } = await axiosSocial.get(
 				`/users?count=${count}&page=${page}&term=${term}&friend=${friend}`,
 				{
-					withCredentials: true
+					withCredentials: true,
+					headers: { 'API-KEY': '4c455b41-e9e2-41e3-8498-c52fd2cfffdc' }
 				}
 			)
 			if (data.error === null) {
