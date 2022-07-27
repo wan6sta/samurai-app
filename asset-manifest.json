@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/samurai-app/static/css/main.89e90749.css",
-    "main.js": "/samurai-app/static/js/main.8643e566.js",
+    "main.css": "/samurai-app/static/css/main.aad3ebfb.css",
+    "main.js": "/samurai-app/static/js/main.1af93619.js",
     "static/media/user2.png": "/samurai-app/static/media/user2.c920752422c11377083e.png",
     "static/media/reactIcon.svg": "/samurai-app/static/media/reactIcon.e27571eaed899c642345e71163624ef9.svg",
     "index.html": "/samurai-app/index.html",
-    "main.89e90749.css.map": "/samurai-app/static/css/main.89e90749.css.map",
-    "main.8643e566.js.map": "/samurai-app/static/js/main.8643e566.js.map"
+    "main.aad3ebfb.css.map": "/samurai-app/static/css/main.aad3ebfb.css.map",
+    "main.1af93619.js.map": "/samurai-app/static/js/main.1af93619.js.map"
   },
   "entrypoints": [
-    "static/css/main.89e90749.css",
-    "static/js/main.8643e566.js"
+    "static/css/main.aad3ebfb.css",
+    "static/js/main.1af93619.js"
   ]
 }
