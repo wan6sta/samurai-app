@@ -6,6 +6,8 @@ import styles from './profileSettings.module.scss'
 import { useDispatch } from 'react-redux'
 import { setProfileInfo } from '../../store/reducers/profilePageSlice/ProfilePage-actions'
 
+const test = 'test'
+
 const validate = (values: any) => {
 	const errors: any = {}
 	if (!values.lookingForAJobDescription) {
