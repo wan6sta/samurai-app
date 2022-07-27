@@ -10,6 +10,14 @@ const Login: FC = () => {
 				<div className={styles.form}>
 					<SignInFormik />
 				</div>
+				<div className={styles.signInTest}>
+					<p>
+						Логин: <b>free@samuraijs.com</b>
+					</p>
+					<p>
+						Пароль: <b>free</b>
+					</p>
+				</div>
 			</div>
 		</div>
 	)
