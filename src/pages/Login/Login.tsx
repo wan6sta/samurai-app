@@ -2,6 +2,8 @@ import { FC } from 'react'
 import styles from './login.module.scss'
 import SignInFormik from '../../components/ui/SignInFormik/SignInFormik'
 
+const a = 0
+
 const Login: FC = () => {
 	return (
 		<div className={styles.login}>
